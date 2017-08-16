@@ -1,0 +1,1 @@
+licensingdiag.exe -report "C:\ProgramData\ABOAT\MultiCrack\reportLicenseDia.txt" -log "C:\ProgramData\ABOAT\MultiCrack\reportLicenseDia.cab"
