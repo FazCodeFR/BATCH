@@ -1,5 +1,5 @@
 @echo off
-Set "Copyright=(C) by Hackoo 2018"
+Set "Copyright=(C) by Hackoo - ABOAT 2018"
 Set "Downloader=%Temp%\Hackoo_Downloader.vbs"
 :menuLOOP
 Title Download The Lastest Version Of Security And Removal Tools  %Copyright%
@@ -11,7 +11,7 @@ for /f "tokens=2* delims=_ " %%A in ('"findstr /b /c:":menu_" "%~f0""') do echo 
 echo(
 echo(       ====================================================================================
 set choice=
-echo( & set /p choice=Make a choice or press ENTER to exit: || GOTO :EOF
+echo( & set /p choice=Faites un choix ou appuyez sur ENTER pour quitter: || GOTO :EOF
 echo( & call :menu_[%choice%]
 GOTO:menuLOOP
 ::*************************************************************************************
@@ -125,6 +125,40 @@ Call :Download %URL%
 Explorer %~dp0
 Goto:MenuLoop
 ::*************************************************************************************
+:menu_[12] Download and Scan with the lastest version of CCleaner professional Free Trial
+Title Downloading CCleaner professional Free Trial ...
+Cls & Mode 70,3
+echo(
+Set "URL=https://download.ccleaner.com/ccsetup542pro.exe"
+echo         Please wait ... Downloading CCleaner professional Free Trial ...
+Call :Download %URL%
+Explorer %~dp0
+Goto:MenuLoop
+::*************************************************************************************
+:menu_[13] Download and Scan with the lastest version of Auslogics Disk Defrag
+Title Downloading Auslogics Disk Defrag ...
+Cls & Mode 70,3
+echo(
+Set "URL=http://downloads.auslogics.com/en/disk-defrag/disk-defrag-setup.exe"
+echo         Please wait ... Downloading Auslogics Disk Defrag ...
+Call :Download %URL%
+Explorer %~dp0
+Goto:MenuLoop
+::*************************************************************************************
+:menu_[14] Download and Scan with the lastest version of Camtasia Studio
+Title Downloading Camtasia Studio ...
+Cls & Mode 70,3
+echo(
+Set "URL=http://download.techsmith.com/camtasiastudio/enu/camtasia.exe"
+echo         Please wait ... Downloading Camtasia Studio ...
+Call :Download %URL%
+Explorer %~dp0
+Goto:MenuLoop
+::*************************************************************************************
+
+
+
+
 :Download <url>
 (
 echo Option Explicit
@@ -133,7 +167,7 @@ echo    MsgBox "The script is already launching" ^& vbCrlf ^&_
 echo    CommandLineLike^(WScript.ScriptName^),VbExclamation,"The script is already launching"    
 echo    WScript.Quit  
 echo Else  
-echo    Const Copyright =" (C) by Hackoo 2018"
+echo    Const Copyright =" (C) by Hackoo - ABOAT 2018"
 echo    Dim Title : Title = "Download The Lastest Version Of Security And Removal Tools"
 echo    Const WHR_EnableRedirects = 6
 echo    Dim Base_Link,Dynamic_Link,Flag,Question,DirectLink,Save2File
