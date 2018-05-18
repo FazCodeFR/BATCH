@@ -3,7 +3,7 @@ Set "Copyright=(C) by Hackoo - ABOAT 2018"
 Set "Downloader=%Temp%\Hackoo_Downloader.vbs"
 :menuLOOP
 Title Download The Lastest Version Of Security And Removal Tools  %Copyright%
-Color 9E & Mode 95,19
+Color 9E & Mode 99,27
 echo(
 echo(       ==================================== Menu ==========================================
 echo(
@@ -151,6 +151,47 @@ Cls & Mode 70,3
 echo(
 Set "URL=http://download.techsmith.com/camtasiastudio/enu/camtasia.exe"
 echo         Please wait ... Downloading Camtasia Studio ...
+Call :Download %URL%
+Explorer %~dp0
+Goto:MenuLoop
+::*************************************************************************************
+:menu_[15] Download and Scan with the lastest version of VLC (x64)
+Title Downloading VLC (x64) ...
+Cls & Mode 70,3
+echo(
+Set "URL=http://ftp.free.org/mirrors/videolan/vlc/3.0.2/win64/vlc-3.0.2-win64.exe"
+echo         Please wait ... Downloading VLC (x64) ...
+Call :Download %URL%
+Explorer %~dp0
+Goto:MenuLoop
+::*************************************************************************************
+:menu_[16] Download and Scan with the lastest version of The PC Decrapifier
+Title Downloading The PC Decrapifier ...
+Cls & Mode 70,3
+echo(
+Set "URL=https://s3.amazonaws.com/dl.pcdecrapifier.com/pc-decrapifier-3.0.1.exe"
+echo         Please wait ... Downloading The PC Decrapifier ...
+Call :Download %URL%
+Explorer %~dp0
+Goto:MenuLoop
+::*************************************************************************************
+:menu_[17] Download and Scan with the lastest version of PDFCreator
+Title Downloading PDFCreator lastest version ...
+Cls & Mode 70,3
+echo(
+Set "URL=http://download.pdfforge.org/download/pdfcreator/PDFCreator-stable?download"
+echo         Please wait ... Downloading PDFCreator lastest version ...
+Call :Download %URL%
+Explorer %~dp0
+Goto:MenuLoop
+::*************************************************************************************
+
+:menu_[18] Download and Scan with the lastest version of VirusTotal
+Title Downloading VirusTotal  ...
+Cls & Mode 70,3
+echo(
+Set "URL=https://www.virustotal.com/static/bin/vtuploader2.2.exe"
+echo         Please wait ... Downloading VirusTotal ...
 Call :Download %URL%
 Explorer %~dp0
 Goto:MenuLoop
